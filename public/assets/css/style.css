@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111;
+    background: #e4e4e4;
+}
+
+a {
+    color: #111;
+}
+
+h1 {
+    margin: 0 0 16px;
+    font-size: 26px;
+}
+
+h2 {
+    margin: 24px 0 12px;
+    font-size: 20px;
+}
+
+h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.site-header {
+    background: #bdbdbd;
+    border-bottom: 1px solid #000;
+}
+
+.bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav,
+.user-box,
+.toolbar,
+.tabs,
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-nav {
+    padding-bottom: 12px;
+}
+
+nav a,
+.button,
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f2f2f2;
+    border: 1px solid #000;
+    color: #111;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+nav a:hover,
+.button:hover,
+button:hover {
+    background: #d0d0d0;
+}
+
+nav a.active,
+.tabs button.active {
+    background: #8c8c8c;
+}
+
+main {
+    padding-top: 24px;
+    padding-bottom: 32px;
+}
+
+.site-footer {
+    padding: 16px 0;
+    background: #bdbdbd;
+    border-top: 1px solid #000;
+}
+
+.panel {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.panel.narrow {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.grid .panel {
+    margin-bottom: 0;
+}
+
+.stat {
+    font-size: 15px;
+}
+
+.stat b {
+    display: block;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.table-wrap {
+    margin-bottom: 16px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th,
+td {
+    padding: 6px 8px;
+    border: 1px solid #000;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #d0d0d0;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 6px 8px;
+    background: #fff;
+    border: 1px solid #000;
+    color: #111;
+    font: inherit;
+    appearance: none;
+}
+
+select {
+    padding-right: 28px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0h10L5 6z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+    outline: 2px solid #000;
+    outline-offset: 1px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0 16px;
+}
+
+.toolbar label {
+    margin-bottom: 0;
+}
+
+.toolbar input,
+.toolbar select {
+    width: auto;
+    min-width: 200px;
+}
+
+form.inline {
+    display: inline-block;
+    margin: 0;
+}
+
+form.inline button,
+.actions .button {
+    padding: 2px 8px;
+}
+
+.notice {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.notice.error {
+    background: #bdbdbd;
+    font-weight: bold;
+}
+
+.tabs {
+    margin-bottom: 16px;
+}
+
+.room form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.room select {
+    width: auto;
+    margin-top: 0;
+}
+
+.status-occupied {
+    background: #b0b0b0;
+}
+
+.status-cleaning {
+    background: #d6d6d6;
+}
+
+.status-maintenance {
+    background: #8c8c8c;
+}
+
+@media (max-width: 700px) {
+    .bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toolbar input,
+    .toolbar select {
+        width: 100%;
+    }
+
+    .toolbar label {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
